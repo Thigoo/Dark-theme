@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Sacramento&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink1: #FEE3EC;
+    --pink2: #F9C5D5;
+    --pink3: #F999B7;
+    --pink4: #F2789F;
+    --white: #000;
+    --icon-sun: "☀️";
+    --txt: "Dark mode";
+}
+
+.dark {
+    --pink3: #533483;
+    --pink2: #16003B;
+    --pink4: #413F42;
+    --pink1: #7F8487;
+    --white: #fafafa;
+    --icon-sun: "🌕";
+    --txt: "Light mode";
+}
+
+#span::before {
+    content: var(--txt);
+}
+
+body {    
+    width: 100%;
+    height: 100vh;
+    background-color: var(--pink2);
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+    transition: all .2s ease;          
+}
+
+.container {
+    border: 1px solid var(--pink4);
+    max-width: 640px;
+    min-height: 250px;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--pink1);
+    box-shadow: 0px 0px 15px 5px var(--pink3);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: absolute;
+    
+}
+
+h1 {
+    margin-bottom: 4rem;
+    font-family: "Poppins";
+}
+
+p {        
+    font-family: "Sacramento";
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+hr {
+    border: .8px solid var(--pink4);
+}
+
+.input-box {
+    position: relative;
+}
+
+.inputs form{    
+    display: flex;
+    flex-direction: column;  
+}
+
+.input-user, #button {
+    width: 100%;
+    margin: .5rem 0;
+    padding: 0.4rem;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;        
+}
+
+.input-user {
+    border-bottom: 1px solid var(--pink4);    
+}
+
+#button {
+    box-shadow: 0 0 40px 40px var(--pink3) inset, 0 0 0 0 var(--pink3);
+    transition: .2s;
+    background-color: var(--pink2);    
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#button:hover {
+    box-shadow: 0 0 5px 0 var(--pink4) inset, 0 0 2px 1px var(--pink4);        
+}
+
+#img-dark::before {    
+    content: var(--icon-sun);
+}
+
+#img-dark {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    color: var(--white);
+}
+
+#img-dark span{
+    font-family: "Poppins";
+    font-size: 0.5rem;
+}
+
+footer {    
+    width: 100%;
+    color: var(--white);   
+    position: fixed;
+    bottom: 0; 
+    text-align: center;
+}
+
+footer p {
+    font-family: "Poppins";
+    font-size: 0.7rem;
+    background-color: var(--pink4);    
+}
+
+.label {    
+    position: absolute;
+    left: 0.5rem;
+    top: -0.2rem;
+    font-size: 0.5rem;
+    font-family: "Poppins";
+    font-weight: 200;
+    transition: .2s;
+    pointer-events: none;
+}
+
+
+@media screen and (max-width: 468px) {
+    .container {
+        flex-direction: column;
+        width: 80%;
+        height: 70%;
+        justify-content: center;    
+        font-size: 1.3rem;    
+    }
+
+    .container p {
+        font-size: 1.8rem;
+    }
+
+    .inputs {
+        margin-top: 1rem;
+        min-width: 250px;
+        padding: 1rem;
+    }
+
+    .input-user {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    #button {
+        padding: 1rem;
+    }
+
+    .label {
+        font-size: 0.9rem;
+        top: -0.7rem;
+    }
+
+}
